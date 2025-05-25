@@ -18,20 +18,110 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Tourist Places Carousel */
+#tourist-places {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#touristCarousel {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+    height: 600px;
+    position: relative;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px 20px;
+    text-align: left;
+}
+
+.carousel-caption h3 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #f8f9fa;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
+.carousel-indicators {
+    margin-bottom: 2rem;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #fff;
+}
+
+.carousel-indicators button.active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
 /* Cards */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
-    height: 250px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -90,6 +180,24 @@ footer {
     .card-img-top {
         height: 200px;
     }
+
+    .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 /* Animation */
@@ -106,4 +214,272 @@ footer {
 
 .card {
     animation: fadeIn 0.5s ease-out;
+}
+
+/* Carousel Styles */
+#sedanCarousel .carousel-item img,
+#suvCarousel .carousel-item img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #f8f9fa;
+}
+
+.testimonial-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    margin: 10px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-rating {
+    font-size: 1.2rem;
+}
+
+.testimonial-rating i {
+    margin-right: 2px;
+}
+
+.testimonial-card .card-text {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.testimonial-author strong {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.testimonial-author p {
+    font-size: 0.9rem;
+}
+
+/* Testimonials Carousel */
+#testimonialsCarousel {
+    padding: 20px 40px;
+    position: relative;
+}
+
+#testimonialsCarousel .carousel-control-prev,
+#testimonialsCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border-radius: 50%;
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+#testimonialsCarousel .carousel-control-prev {
+    left: 0;
+}
+
+#testimonialsCarousel .carousel-control-next {
+    right: 0;
+}
+
+#testimonialsCarousel .carousel-control-prev:hover,
+#testimonialsCarousel .carousel-control-next:hover {
+    background-color: #0056b3;
+    transform: translateY(-50%) scale(1.1);
+}
+
+#testimonialsCarousel .carousel-control-prev-icon,
+#testimonialsCarousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Feedback Form */
+.feedback-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.rating-input {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.rating-input i {
+    color: #ddd;
+    transition: color 0.2s ease;
+}
+
+.rating-input i:hover,
+.rating-input i.active {
+    color: #ffc107;
+}
+
+.rating-input i:hover ~ i {
+    color: #ddd;
+}
+
+.feedback-card .form-control,
+.feedback-card .form-select {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.feedback-card .form-control:focus,
+.feedback-card .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.feedback-card .btn-primary {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+/* Car Carousels */
+#sedanCarousel,
+#suvCarousel {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+#sedanCarousel .carousel-item,
+#suvCarousel .carousel-item {
+    height: 400px;
+    position: relative;
+}
+
+#sedanCarousel .carousel-item img,
+#suvCarousel .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#sedanCarousel .carousel-caption,
+#suvCarousel .carousel-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    text-align: left;
+}
+
+#sedanCarousel .carousel-caption h3,
+#suvCarousel .carousel-caption h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#sedanCarousel .carousel-caption p,
+#suvCarousel .carousel-caption p {
+    font-size: 1rem;
+    color: #f8f9fa;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#sedanCarousel .carousel-control-prev,
+#sedanCarousel .carousel-control-next,
+#suvCarousel .carousel-control-prev,
+#suvCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+#sedanCarousel .carousel-control-prev,
+#suvCarousel .carousel-control-prev {
+    left: 10px;
+}
+
+#sedanCarousel .carousel-control-next,
+#suvCarousel .carousel-control-next {
+    right: 10px;
+}
+
+#sedanCarousel .carousel-control-prev:hover,
+#sedanCarousel .carousel-control-next:hover,
+#suvCarousel .carousel-control-prev:hover,
+#suvCarousel .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
+/* Card body styling */
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+.list-unstyled i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #sedanCarousel,
+    #suvCarousel {
+        height: 300px;
+    }
+
+    #sedanCarousel .carousel-item,
+    #suvCarousel .carousel-item {
+        height: 300px;
+    }
+
+    #sedanCarousel .carousel-caption h3,
+    #suvCarousel .carousel-caption h3 {
+        font-size: 1.5rem;
+    }
+
+    #sedanCarousel .carousel-caption p,
+    #suvCarousel .carousel-caption p {
+        font-size: 0.9rem;
+    }
 } 
